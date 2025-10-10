@@ -6,32 +6,32 @@ const Testimonials = () => {
     {
       name: "Lisa M.",
       role: "Parent of Grade 3 Student",
-      content: "Sarah has been amazing with my daughter. Her reading has improved so much, and she actually looks forward to tutoring sessions now! The confidence boost has been incredible.",
+      content: "Miss L has been amazing with my daughter's reading comprehension. Her confidence has grown so much, and she actually looks forward to tutoring sessions now! The progress has been incredible.",
       rating: 5,
     },
     {
       name: "David & Emma K.",
       role: "Parents of Grade 5 Student",
-      content: "Our son was struggling with maths and dreading homework time. Within just a few weeks with Sarah, we saw a complete turnaround. His grades improved and he's much happier at school.",
+      content: "Our son was struggling with maths and dreading homework time. Within just a few weeks with Miss L, we saw a complete turnaround. His grades improved and he's much happier at school.",
       rating: 5,
     },
     {
       name: "Thandi N.",
       role: "Parent of Grade 2 Student",
-      content: "What I love most is how patient and encouraging Sarah is. She makes learning fun, and my daughter has gained so much confidence. Best investment we've made in her education!",
+      content: "What I love most is how patient and encouraging Miss L is. She makes learning fun, and my daughter has gained so much confidence. Best investment we've made in her education!",
       rating: 5,
     },
     {
       name: "Michael R.",
       role: "Parent of Grade 6 Student",
-      content: "The personalized approach makes all the difference. Sarah really takes time to understand my son's learning style and adapts her methods. His test scores have improved significantly.",
+      content: "The Math Confidence Building program has been life-changing. Miss L really takes time to understand my son's learning style and adapts her methods. His test scores have improved significantly.",
       rating: 5,
     },
   ];
 
   const childFeedback = [
-    { name: "Sophie", grade: "Grade 3", quote: "Miss Sarah makes reading fun! I love our sessions." },
-    { name: "Liam", grade: "Grade 5", quote: "Maths isn't scary anymore. Miss Sarah explains things really well!" },
+    { name: "Sophie", grade: "Grade 3", quote: "Miss L makes reading fun! I love our sessions." },
+    { name: "Liam", grade: "Grade 5", quote: "Maths isn't scary anymore. Miss L explains things really well!" },
   ];
 
   return (

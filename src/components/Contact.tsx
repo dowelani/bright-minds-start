@@ -24,7 +24,7 @@ const Contact = () => {
   };
 
   const handleWhatsApp = () => {
-    const message = "Hi! I'd like to book a free trial session for my child.";
+    const message = "Hi Miss L! I'd like to learn more about your tutoring programs for my child.";
     const whatsappUrl = `https://wa.me/27123456789?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
   };
@@ -145,8 +145,8 @@ const Contact = () => {
                     <Phone className="text-primary" size={20} />
                   </div>
                   <div>
-                    <p className="font-semibold">Phone</p>
-                    <p className="text-muted-foreground">012 345 6789</p>
+                    <p className="font-semibold">Phone / WhatsApp</p>
+                    <p className="text-muted-foreground">Contact via form or WhatsApp</p>
                   </div>
                 </div>
 
@@ -156,17 +156,17 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-semibold">Email</p>
-                    <p className="text-muted-foreground">sarah@kidstutor.co.za</p>
+                    <p className="text-muted-foreground">info@missltutoring.co.za</p>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-secondary-light flex items-center justify-center flex-shrink-0">
-                    <MapPin className="text-secondary" size={20} />
+                  <div className="w-12 h-12 rounded-full bg-yellow-light flex items-center justify-center flex-shrink-0">
+                    <MapPin className="text-yellow" size={20} />
                   </div>
                   <div>
                     <p className="font-semibold">Location</p>
-                    <p className="text-muted-foreground">Pretoria East</p>
+                    <p className="text-muted-foreground">Online & Home Visits Available</p>
                   </div>
                 </div>
               </div>

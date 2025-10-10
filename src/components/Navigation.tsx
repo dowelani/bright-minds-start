@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.jpeg";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -41,9 +42,10 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           <button
             onClick={() => scrollToSection("home")}
-            className="text-2xl font-bold bg-gradient-hero bg-clip-text text-transparent"
+            className="flex items-center gap-2"
           >
-            KidsTutor
+            <img src={logo} alt="Miss L Tutoring Services" className="h-12 w-12 object-contain" />
+            <span className="text-xl font-bold text-secondary hidden sm:inline">Miss L Tutoring</span>
           </button>
 
           {/* Desktop Navigation */}

@@ -32,16 +32,16 @@ const Hero = () => {
 
           {/* Main Heading */}
           <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-            Helping Primary School Kids Build{" "}
+            Building Strong{" "}
             <span className="bg-gradient-hero bg-clip-text text-transparent">
-              Confidence
+              Foundations
             </span>{" "}
-            in Maths & Reading
+            in Reading & Maths
           </h1>
 
           {/* Subheading */}
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
-            Personalized tutoring that makes learning fun and helps your child thrive academically
+            Specialized programs for Grades 1-7, focusing on reading comprehension, math confidence, and homework mastery
           </p>
 
           {/* CTAs */}

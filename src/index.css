@@ -9,50 +9,56 @@ All colors MUST be HSL.
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222 47% 11%;
+    --foreground: 220 50% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card-foreground: 220 50% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover-foreground: 220 50% 15%;
 
-    /* Warm trustworthy blue */
-    --primary: 210 100% 45%;
+    /* Vibrant Pink/Magenta - primary brand color */
+    --primary: 330 78% 64%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 210 100% 95%;
+    --primary-light: 330 78% 95%;
 
-    /* Encouraging coral/orange */
-    --secondary: 25 95% 60%;
+    /* Navy Blue - strong accent */
+    --secondary: 222 47% 22%;
     --secondary-foreground: 0 0% 100%;
-    --secondary-light: 25 100% 95%;
+    --secondary-light: 222 47% 95%;
 
-    /* Soft encouraging green */
-    --accent: 150 60% 50%;
-    --accent-foreground: 0 0% 100%;
-    --accent-light: 150 60% 95%;
+    /* Bright Cyan - playful accent */
+    --accent: 190 100% 50%;
+    --accent-foreground: 220 50% 15%;
+    --accent-light: 190 100% 95%;
 
-    --muted: 210 20% 96%;
-    --muted-foreground: 215 16% 47%;
+    /* Sunny Yellow - highlight color */
+    --yellow: 48 100% 50%;
+    --yellow-foreground: 220 50% 15%;
+    --yellow-light: 48 100% 95%;
+
+    --muted: 330 20% 96%;
+    --muted-foreground: 220 15% 47%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 210 100% 45%;
+    --border: 330 20% 91%;
+    --input: 330 20% 91%;
+    --ring: 330 78% 64%;
 
     --radius: 0.75rem;
     
-    /* Warm gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(210 100% 45%) 0%, hsl(195 100% 50%) 100%);
-    --gradient-warm: linear-gradient(135deg, hsl(25 95% 60%) 0%, hsl(35 95% 65%) 100%);
-    --gradient-soft: linear-gradient(180deg, hsl(210 100% 98%) 0%, hsl(0 0% 100%) 100%);
+    /* Brand gradients using pink, cyan, yellow */
+    --gradient-hero: linear-gradient(135deg, hsl(330 78% 64%) 0%, hsl(190 100% 50%) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(330 78% 64%) 0%, hsl(340 75% 60%) 100%);
+    --gradient-fun: linear-gradient(135deg, hsl(190 100% 50%) 0%, hsl(48 100% 50%) 100%);
+    --gradient-soft: linear-gradient(180deg, hsl(330 78% 98%) 0%, hsl(0 0% 100%) 100%);
     
-    /* Shadows */
-    --shadow-soft: 0 2px 8px -2px hsl(210 100% 45% / 0.15);
-    --shadow-medium: 0 4px 16px -4px hsl(210 100% 45% / 0.2);
-    --shadow-large: 0 8px 32px -8px hsl(210 100% 45% / 0.25);
+    /* Shadows with pink tint */
+    --shadow-soft: 0 2px 8px -2px hsl(330 78% 64% / 0.15);
+    --shadow-medium: 0 4px 16px -4px hsl(330 78% 64% / 0.2);
+    --shadow-large: 0 8px 32px -8px hsl(330 78% 64% / 0.25);
     
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -84,17 +90,21 @@ All colors MUST be HSL.
     --popover: 222 47% 14%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 210 100% 55%;
+    --primary: 330 78% 70%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 210 100% 20%;
+    --primary-light: 330 78% 20%;
 
-    --secondary: 25 95% 65%;
+    --secondary: 222 47% 30%;
     --secondary-foreground: 0 0% 100%;
-    --secondary-light: 25 80% 20%;
+    --secondary-light: 222 47% 15%;
 
-    --accent: 150 60% 55%;
-    --accent-foreground: 0 0% 100%;
-    --accent-light: 150 50% 20%;
+    --accent: 190 100% 55%;
+    --accent-foreground: 220 50% 15%;
+    --accent-light: 190 80% 20%;
+
+    --yellow: 48 100% 55%;
+    --yellow-foreground: 220 50% 15%;
+    --yellow-light: 48 80% 20%;
 
     --muted: 217 33% 17%;
     --muted-foreground: 215 20% 65%;
@@ -104,16 +114,16 @@ All colors MUST be HSL.
 
     --border: 217 33% 20%;
     --input: 217 33% 20%;
-    --ring: 210 100% 55%;
+    --ring: 330 78% 70%;
 
     --sidebar-background: 240 6% 10%;
     --sidebar-foreground: 240 5% 96%;
-    --sidebar-primary: 224 76% 48%;
+    --sidebar-primary: 330 78% 64%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 240 4% 16%;
     --sidebar-accent-foreground: 240 5% 96%;
     --sidebar-border: 240 4% 16%;
-    --sidebar-ring: 217 91% 60%;
+    --sidebar-ring: 330 78% 64%;
   }
 }
 

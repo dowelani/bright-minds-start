@@ -27,7 +27,7 @@ const About = () => {
           {/* Section Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Hi, I'm <span className="bg-gradient-hero bg-clip-text text-transparent">Sarah</span>
+              Meet <span className="bg-gradient-hero bg-clip-text text-transparent">Miss L</span>
             </h2>
             <p className="text-xl text-muted-foreground">
               Your Partner in Your Child's Learning Journey
@@ -37,20 +37,20 @@ const About = () => {
           {/* Story */}
           <div className="prose prose-lg max-w-none mb-12 text-foreground/90 space-y-4">
             <p className="text-lg leading-relaxed">
-              As a former primary school teacher with over 5 years of experience, I understand the challenges 
-              children face in maths and reading. I've watched countless students transform from frustrated 
-              learners into confident, enthusiastic kids who actually enjoy their schoolwork.
+              At Miss L Tutoring Services, I specialize in building strong foundations in reading and mathematics 
+              for primary school learners. With years of experience working with Grades 1-7, I've developed targeted 
+              programs that address the specific challenges children face at different learning stages.
             </p>
             <p className="text-lg leading-relaxed">
-              My journey into tutoring began when I noticed that some children just need a little extra support 
-              and a different approach to truly shine. I decided to create a warm, encouraging space where kids 
-              can learn at their own pace, ask questions without fear, and build the foundation they need for 
-              academic success.
+              My approach focuses on three core areas: Reading Comprehension for early readers (Grades 1-4), 
+              Math Confidence Building for intermediate learners (Grades 4-7), and a comprehensive Homework Mastery 
+              Program for busy parents who want their children to develop strong study habits.
             </p>
             <p className="text-lg leading-relaxed">
-              As a parent myself, I know how important it is to trust someone with your child's education. 
-              That's why I focus not just on academic improvement, but on building your child's confidence 
-              and love for learning.
+              I believe every child can excel when given the right support and encouragement. My personalized 
+              tutoring sessions are designed to make learning enjoyable while building the confidence and skills 
+              your child needs to succeed academically. Whether through one-on-one sessions or small group 
+              tutoring, I create a warm, supportive environment where children feel safe to ask questions and grow.
             </p>
           </div>
 

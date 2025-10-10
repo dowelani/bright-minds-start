@@ -17,10 +17,10 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <h3 className="text-2xl font-bold bg-gradient-hero bg-clip-text text-transparent mb-3">
-              KidsTutor
+              Miss L Tutoring Services
             </h3>
             <p className="text-muted-foreground text-sm">
-              Helping primary school kids build confidence in maths and reading through personalized tutoring.
+              Building strong foundations in reading and maths for Grades 1-7 through specialized tutoring programs.
             </p>
           </div>
 
@@ -43,12 +43,13 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="font-bold mb-3">Services</h4>
+            <h4 className="font-bold mb-3">Programs</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>Homework Support (Gr 1-3)</li>
+              <li>Reading Comprehension (Gr 1-4)</li>
               <li>Math Confidence (Gr 4-7)</li>
+              <li>Homework Mastery Program</li>
               <li>Group Tutoring</li>
-              <li>Free Trial Sessions</li>
+              <li>Test Prep Crash Course</li>
             </ul>
           </div>
 
@@ -56,9 +57,9 @@ const Footer = () => {
           <div>
             <h4 className="font-bold mb-3">Get in Touch</h4>
             <div className="space-y-2 text-sm text-muted-foreground mb-4">
-              <p>012 345 6789</p>
-              <p>sarah@kidstutor.co.za</p>
-              <p>Pretoria East</p>
+              <p>Contact for details</p>
+              <p>info@missltutoring.co.za</p>
+              <p>Online & Home Visits Available</p>
             </div>
             <div className="flex gap-3">
               <a
@@ -86,7 +87,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t pt-8 text-center text-sm text-muted-foreground">
           <p className="flex items-center justify-center gap-1">
-            © {currentYear} KidsTutor. Made with <Heart className="text-secondary fill-secondary" size={14} /> for learning.
+            © {currentYear} Miss L Tutoring Services. Made with <Heart className="text-primary fill-primary" size={14} /> for learning.
           </p>
         </div>
       </div>
