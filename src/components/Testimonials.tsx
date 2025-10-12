@@ -50,10 +50,15 @@ const Testimonials = () => {
         {/* Parent Testimonials Grid */}
         <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto mb-12">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="p-6 hover:shadow-medium transition-all border-2">
-              <div className="flex items-center mb-4">
+            <Card key={index} className="p-6 hover:shadow-medium transition-all border-2 hover:-translate-y-1 group">
+              <div className="flex items-center mb-4 gap-1">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="text-secondary fill-secondary" size={18} />
+                  <Star 
+                    key={i} 
+                    className="text-secondary fill-secondary group-hover:animate-bounce-slow" 
+                    size={18} 
+                    style={{ animationDelay: `${i * 0.1}s` }}
+                  />
                 ))}
               </div>
               <Quote className="text-primary/20 mb-2" size={32} />
@@ -71,10 +76,10 @@ const Testimonials = () => {
           <h3 className="text-2xl font-bold text-center mb-6">From the Kids</h3>
           <div className="grid md:grid-cols-2 gap-6">
             {childFeedback.map((feedback, index) => (
-              <Card key={index} className="p-6 bg-primary-light border-2 border-primary/20">
+              <Card key={index} className="p-6 bg-primary-light border-2 border-primary/20 hover:shadow-medium transition-all hover:-translate-y-1 group">
                 <p className="text-lg text-foreground/90 italic mb-3">"{feedback.quote}"</p>
                 <div className="flex items-center gap-2">
-                  <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">
+                  <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold group-hover:animate-bounce-slow">
                     {feedback.name[0]}
                   </div>
                   <div>

@@ -1,5 +1,6 @@
-import { Heart, Award, Users } from "lucide-react";
+import { Heart, Award, Target, Smile, Star } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import mascotOwl from "@/assets/mascot-owl.jpg";
 
 const About = () => {
   const values = [
@@ -14,7 +15,7 @@ const About = () => {
       description: "Using evidence-based techniques that make learning engaging and effective",
     },
     {
-      icon: Users,
+      icon: Smile,
       title: "Personal Approach",
       description: "Every child is unique, and I tailor my teaching to their individual needs",
     },
@@ -23,9 +24,20 @@ const About = () => {
   return (
     <section id="about" className="py-24 bg-gradient-soft">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-          {/* Section Header */}
-          <div className="text-center mb-16">
+        <div className="max-w-5xl mx-auto">
+          {/* Section Header with Mascot */}
+          <div className="text-center mb-12 relative">
+            <div className="flex justify-center mb-6">
+              <div className="relative">
+                <img 
+                  src={mascotOwl} 
+                  alt="Miss L Mascot - Wise Owl" 
+                  className="w-32 h-32 rounded-full shadow-large animate-float"
+                />
+                <Star className="absolute -top-2 -right-2 text-yellow animate-spin-slow" size={24} fill="currentColor" />
+                <Star className="absolute -bottom-2 -left-2 text-yellow animate-pulse-slow" size={20} fill="currentColor" />
+              </div>
+            </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               Meet <span className="bg-gradient-hero bg-clip-text text-transparent">Miss L</span>
             </h2>
@@ -61,12 +73,15 @@ const About = () => {
               return (
                 <Card
                   key={index}
-                  className="p-6 text-center hover:shadow-medium transition-all border-2"
+                  className="p-6 text-center hover:shadow-medium transition-all border-2 hover:-translate-y-1 group"
                 >
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary-light mb-4">
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary-light mb-4 group-hover:animate-bounce-slow">
                     <Icon className="text-primary" size={32} />
                   </div>
-                  <h3 className="text-xl font-bold mb-2">{value.title}</h3>
+                  <h3 className="text-xl font-bold mb-2 flex items-center justify-center gap-2">
+                    {value.title}
+                    <Star className="text-yellow opacity-0 group-hover:opacity-100 transition-opacity" size={16} fill="currentColor" />
+                  </h3>
                   <p className="text-muted-foreground">{value.description}</p>
                 </Card>
               );

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
+import { Phone, Mail, MapPin, MessageCircle, Star, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
@@ -33,19 +33,29 @@ const Contact = () => {
     <section id="contact" className="py-24 bg-gradient-soft">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center mb-16 max-w-3xl mx-auto">
+        <div className="text-center mb-16 max-w-3xl mx-auto relative">
+          <Sparkles className="absolute -top-8 left-1/4 text-yellow animate-spin-slow" size={32} />
+          <Star className="absolute -top-4 right-1/4 text-accent animate-float" size={28} fill="currentColor" />
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Let's Get <span className="bg-gradient-hero bg-clip-text text-transparent">Started</span>
           </h2>
           <p className="text-xl text-muted-foreground">
             Book a free trial session or get in touch to discuss your child's needs
           </p>
+          <div className="flex justify-center gap-2 mt-4">
+            <Star className="text-yellow animate-bounce-slow" size={20} fill="currentColor" />
+            <Star className="text-yellow animate-bounce-slow" size={24} fill="currentColor" style={{ animationDelay: "0.2s" }} />
+            <Star className="text-yellow animate-bounce-slow" size={20} fill="currentColor" style={{ animationDelay: "0.4s" }} />
+          </div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Form */}
-          <Card className="p-8 border-2">
-            <h3 className="text-2xl font-bold mb-6">Send a Message</h3>
+          <Card className="p-8 border-2 hover:shadow-medium transition-all">
+            <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
+              <Mail className="text-primary animate-wiggle" size={28} />
+              Send a Message
+            </h3>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label className="block text-sm font-medium mb-2">Parent Name *</label>
@@ -111,7 +121,7 @@ const Contact = () => {
                 />
               </div>
 
-              <Button type="submit" className="w-full bg-gradient-hero">
+              <Button type="submit" className="w-full bg-gradient-hero hover:scale-105 active:scale-95 transition-transform">
                 <Mail className="mr-2" size={18} />
                 Send Message
               </Button>
@@ -120,9 +130,9 @@ const Contact = () => {
 
           {/* Contact Info */}
           <div className="space-y-6">
-            <Card className="p-6 border-2 hover:shadow-medium transition-all">
+            <Card className="p-6 border-2 hover:shadow-medium transition-all group">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-secondary-light flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 rounded-full bg-secondary-light flex items-center justify-center flex-shrink-0 group-hover:animate-bounce-slow">
                   <MessageCircle className="text-secondary" size={24} />
                 </div>
                 <div className="flex-1">
@@ -130,7 +140,7 @@ const Contact = () => {
                   <p className="text-muted-foreground mb-4">
                     Get instant answers to your questions and schedule sessions directly
                   </p>
-                  <Button onClick={handleWhatsApp} className="bg-gradient-warm w-full">
+                  <Button onClick={handleWhatsApp} className="bg-gradient-warm w-full hover:scale-105 active:scale-95 transition-transform">
                     <MessageCircle className="mr-2" size={18} />
                     Chat on WhatsApp
                   </Button>

@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { BookOpen, TrendingUp } from "lucide-react";
+import { BookOpen, TrendingUp, Star, Sparkles } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
+import FloatingShapes from "./FloatingShapes";
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -11,7 +12,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center pt-20">
+    <section id="home" className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       {/* Background with gradient overlay */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-soft z-10" />
@@ -22,12 +23,16 @@ const Hero = () => {
         />
       </div>
 
+      {/* Floating Shapes */}
+      <FloatingShapes />
+
       <div className="container mx-auto px-4 relative z-20">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-primary-light px-6 py-3 rounded-full text-primary font-semibold text-sm shadow-soft">
-            <BookOpen size={18} />
+          <div className="inline-flex items-center gap-2 bg-primary-light px-6 py-3 rounded-full text-primary font-semibold text-sm shadow-soft animate-bounce-slow">
+            <Sparkles size={18} className="animate-spin-slow" />
             <span>Trusted by 50+ Happy Families</span>
+            <Star size={18} fill="currentColor" className="animate-pulse-slow" />
           </div>
 
           {/* Main Heading */}
@@ -49,9 +54,9 @@ const Hero = () => {
             <Button
               size="lg"
               onClick={scrollToContact}
-              className="bg-gradient-warm text-lg px-8 py-6 shadow-medium hover:shadow-large transition-all"
+              className="bg-gradient-warm text-lg px-8 py-6 shadow-medium hover:shadow-large transition-all hover:scale-105 active:scale-95"
             >
-              <BookOpen className="mr-2" size={20} />
+              <BookOpen className="mr-2 animate-wiggle" size={20} />
               Book a Free Trial Session
             </Button>
             <Button

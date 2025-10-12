@@ -1,6 +1,9 @@
-import { Check } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { BookOpen, Calculator, ClipboardCheck, Users, Trophy, Star } from "lucide-react";
+import readingKids from "@/assets/reading-kids.jpg";
+import mathKids from "@/assets/math-kids.jpg";
+import homeworkKids from "@/assets/homework-kids.jpg";
 
 const Services = () => {
   const scrollToContact = () => {
@@ -10,56 +13,62 @@ const Services = () => {
     }
   };
 
-  const packages = [
+  const services = [
     {
-      name: "Reading Comprehension Booster",
-      subtitle: "Grades 1-4",
-      price: "R1,200",
-      period: "per month",
-      description: "Build strong reading foundations with 2 sessions per week focused on comprehension and fluency",
+      icon: BookOpen,
+      title: "Reading Comprehension Booster",
+      grade: "Grades 1-4",
+      description: "Build strong reading foundations with engaging stories, phonics, and comprehension strategies that make reading fun!",
       features: [
         "2x weekly sessions",
         "Reading fluency practice",
         "Comprehension strategies",
         "Vocabulary building",
         "Progress tracking",
-        "Parent communication",
+        "Parent communication"
       ],
-      accent: "primary",
+      price: "R1,200/month",
+      sessions: "2 sessions per week",
+      image: readingKids,
+      color: "primary"
     },
     {
-      name: "Math Confidence Building",
-      subtitle: "Grades 4-7",
-      price: "R1,200",
-      period: "per month",
-      description: "Develop mathematical thinking and problem-solving skills with personalized attention",
+      icon: Calculator,
+      title: "Math Confidence Building",
+      grade: "Grades 4-7",
+      description: "Transform math anxiety into confidence with personalized attention and fun problem-solving techniques!",
       features: [
         "2x weekly sessions",
         "Problem-solving techniques",
         "Curriculum aligned",
         "Concept mastery focus",
         "Test preparation",
-        "Monthly assessments",
+        "Monthly assessments"
       ],
-      accent: "accent",
-      featured: true,
+      price: "R1,200/month",
+      sessions: "2 sessions per week",
+      image: mathKids,
+      color: "secondary",
+      featured: true
     },
     {
-      name: "Homework Mastery Program",
-      subtitle: "All Grades",
-      price: "R2,200",
-      period: "per month",
-      description: "Complete homework support for busy parents, ensuring your child stays on track",
+      icon: ClipboardCheck,
+      title: "Homework Mastery Program",
+      grade: "All Grades",
+      description: "Supporting busy parents by ensuring homework gets done correctly while building independent study skills!",
       features: [
         "Daily homework assistance",
         "All subjects covered",
         "Study skills development",
         "Time management training",
         "Flexible scheduling",
-        "Weekly progress reports",
+        "Weekly progress reports"
       ],
-      accent: "secondary",
-    },
+      price: "R2,200/month",
+      sessions: "Flexible scheduling",
+      image: homeworkKids,
+      color: "accent"
+    }
   ];
 
   const additionalServices = [
@@ -92,53 +101,74 @@ const Services = () => {
           </p>
         </div>
 
-        {/* Main Programs Grid */}
+        {/* Main Services */}
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
-          {packages.map((pkg, index) => (
-            <Card
-              key={index}
-              className={`relative p-8 hover:shadow-large transition-all ${
-                pkg.featured ? "border-accent border-2 shadow-medium" : "border-2"
-              }`}
-            >
-              {pkg.featured && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <span className="bg-gradient-fun text-secondary-foreground px-6 py-2 rounded-full text-sm font-bold shadow-soft">
-                    Most Popular
-                  </span>
-                </div>
-              )}
-
-              <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold mb-1">{pkg.name}</h3>
-                <p className="text-sm text-muted-foreground mb-4">{pkg.subtitle}</p>
-                <div className="mb-4">
-                  <span className="text-4xl font-bold text-foreground">{pkg.price}</span>
-                  <span className="text-muted-foreground ml-2">{pkg.period}</span>
-                </div>
-                <p className="text-sm text-muted-foreground">{pkg.description}</p>
-              </div>
-
-              <ul className="space-y-3 mb-8">
-                {pkg.features.map((feature, fIndex) => (
-                  <li key={fIndex} className="flex items-start">
-                    <div className={`flex-shrink-0 w-5 h-5 rounded-full bg-${pkg.accent}-light flex items-center justify-center mr-3 mt-0.5`}>
-                      <Check className={`text-${pkg.accent}`} size={14} />
-                    </div>
-                    <span className="text-foreground/90">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <Button
-                onClick={scrollToContact}
-                className={`w-full ${pkg.featured ? "bg-gradient-fun" : ""}`}
-                variant={pkg.featured ? "default" : "outline"}
+          {services.map((service, index) => {
+            const Icon = service.icon;
+            return (
+              <Card 
+                key={index} 
+                className={`overflow-hidden hover:shadow-large transition-all border-2 hover:border-primary/50 hover:-translate-y-2 group ${
+                  service.featured ? "ring-2 ring-accent shadow-medium" : ""
+                }`}
               >
-                Get Started
-              </Button>
-            </Card>
-          ))}
+                {service.featured && (
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
+                    <span className="bg-gradient-fun text-secondary-foreground px-6 py-2 rounded-full text-sm font-bold shadow-medium animate-bounce-slow">
+                      ⭐ Most Popular ⭐
+                    </span>
+                  </div>
+                )}
+                
+                {/* Cartoon Image Header */}
+                <div className="relative h-48 overflow-hidden">
+                  <img 
+                    src={service.image} 
+                    alt={service.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                  <div className="absolute top-4 right-4">
+                    <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-medium group-hover:animate-bounce-slow">
+                      <Icon className={`text-${service.color}`} size={24} />
+                    </div>
+                  </div>
+                  {/* Decorative stars */}
+                  <Star className="absolute top-4 left-4 text-yellow animate-pulse-slow" size={20} fill="currentColor" />
+                  <Star className="absolute bottom-4 right-16 text-yellow animate-float" size={16} fill="currentColor" style={{ animationDelay: "0.5s" }} />
+                </div>
+                
+                <div className="p-6">
+                  <h3 className="text-2xl font-bold mb-2">{service.title}</h3>
+                  <p className="text-sm text-secondary font-semibold mb-3 inline-flex items-center gap-1">
+                    <Trophy size={16} />
+                    {service.grade}
+                  </p>
+                  <p className="text-muted-foreground mb-4">{service.description}</p>
+                  <ul className="space-y-2 mb-6">
+                    {service.features.map((feature, i) => (
+                      <li key={i} className="flex items-start gap-2">
+                        <Star className="text-yellow mt-1 flex-shrink-0" size={16} fill="currentColor" />
+                        <span className="text-sm">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="border-t pt-4 mb-4">
+                    <p className="text-2xl font-bold text-primary mb-1">{service.price}</p>
+                    <p className="text-sm text-muted-foreground">{service.sessions}</p>
+                  </div>
+                  <Button 
+                    onClick={scrollToContact} 
+                    className={`w-full hover:scale-105 active:scale-95 transition-transform ${
+                      service.featured ? "bg-gradient-fun" : ""
+                    }`}
+                    variant={service.featured ? "default" : "outline"}
+                  >
+                    Get Started
+                  </Button>
+                </div>
+              </Card>
+            );
+          })}
         </div>
 
         {/* Additional Services */}
