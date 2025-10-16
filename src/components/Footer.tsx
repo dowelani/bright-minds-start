@@ -57,8 +57,8 @@ const Footer = () => {
           <div>
             <h4 className="font-bold mb-3">Get in Touch</h4>
             <div className="space-y-2 text-sm text-muted-foreground mb-4">
-              <p>Contact for details</p>
-              <p>info@missltutoring.co.za</p>
+              <p>📱 081 577 4343</p>
+              <p>📧 lebstonperez@gmail.com</p>
               <p>Online & Home Visits Available</p>
             </div>
             <div className="flex gap-3">
@@ -75,7 +75,7 @@ const Footer = () => {
                 <Instagram size={18} />
               </a>
               <a
-                href="#"
+                href="mailto:lebstonperez@gmail.com"
                 className="w-10 h-10 rounded-full bg-accent-light flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors"
               >
                 <Mail size={18} />

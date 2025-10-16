@@ -25,7 +25,7 @@ const Contact = () => {
 
   const handleWhatsApp = () => {
     const message = "Hi Miss L! I'd like to learn more about your tutoring programs for my child.";
-    const whatsappUrl = `https://wa.me/27123456789?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/27815774343?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
   };
 

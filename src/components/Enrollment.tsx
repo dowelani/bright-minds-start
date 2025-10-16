@@ -73,15 +73,19 @@ const Enrollment = () => {
           <div className="space-y-4 bg-white/50 dark:bg-gray-800/50 rounded-lg p-6">
             <div className="flex justify-between items-center border-b pb-3">
               <span className="font-semibold text-muted-foreground">Bank:</span>
-              <span className="text-lg font-bold">FNB</span>
+              <span className="text-lg font-bold">TymeBank</span>
             </div>
             <div className="flex justify-between items-center border-b pb-3">
-              <span className="font-semibold text-muted-foreground">Account Name:</span>
-              <span className="text-lg font-bold">Miss L Tutoring</span>
+              <span className="font-semibold text-muted-foreground">Account Holder:</span>
+              <span className="text-lg font-bold">Lebogang Motlalepula Letsoalo</span>
             </div>
             <div className="flex justify-between items-center border-b pb-3">
               <span className="font-semibold text-muted-foreground">Account Number:</span>
-              <span className="text-lg font-bold">1234567890</span>
+              <span className="text-lg font-bold">51083106465</span>
+            </div>
+            <div className="flex justify-between items-center border-b pb-3">
+              <span className="font-semibold text-muted-foreground">Branch Code:</span>
+              <span className="text-lg font-bold">678910</span>
             </div>
             <div className="flex justify-between items-center">
               <span className="font-semibold text-muted-foreground">Reference:</span>
@@ -101,19 +105,19 @@ const Enrollment = () => {
           <p className="text-lg font-semibold">Send your proof of payment to:</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a 
-              href="https://wa.me/27123456789" 
+              href="https://wa.me/27815774343" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-semibold"
             >
-              📱 WhatsApp: 071 234 5678
+              📱 WhatsApp: 081 577 4343
             </a>
             <span className="hidden sm:inline text-muted-foreground">or</span>
             <a 
-              href="mailto:hello@missltutoring.co.za"
+              href="mailto:lebstonperez@gmail.com"
               className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-semibold"
             >
-              📧 hello@missltutoring.co.za
+              📧 lebstonperez@gmail.com
             </a>
           </div>
         </div>
