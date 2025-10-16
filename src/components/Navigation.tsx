@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.jpeg";
@@ -6,6 +7,7 @@ import logo from "@/assets/logo.jpeg";
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,21 +17,13 @@ const Navigation = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setIsMobileMenuOpen(false);
-    }
-  };
-
   const navLinks = [
-    { label: "Home", id: "home" },
-    { label: "About", id: "about" },
-    { label: "Services", id: "services" },
-    { label: "Testimonials", id: "testimonials" },
-    { label: "Resources", id: "resources" },
-    { label: "Contact", id: "contact" },
+    { label: "Home", path: "/" },
+    { label: "About", path: "/about" },
+    { label: "Services", path: "/services" },
+    { label: "Testimonials", path: "/testimonials" },
+    { label: "Resources", path: "/resources" },
+    { label: "Contact", path: "/contact" },
   ];
 
   return (
@@ -40,28 +34,31 @@ const Navigation = () => {
     >
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <button
-            onClick={() => scrollToSection("home")}
-            className="flex items-center gap-2"
-          >
+          <Link to="/" className="flex items-center gap-2">
             <img src={logo} alt="Miss L Tutoring Services" className="h-12 w-12 object-contain" />
             <span className="text-xl font-bold text-secondary hidden sm:inline">Miss L Tutoring</span>
-          </button>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <button
-                key={link.id}
-                onClick={() => scrollToSection(link.id)}
-                className="text-foreground/80 hover:text-primary transition-colors font-medium"
+              <Link
+                key={link.path}
+                to={link.path}
+                className={`transition-colors font-medium ${
+                  location.pathname === link.path
+                    ? "text-primary"
+                    : "text-foreground/80 hover:text-primary"
+                }`}
               >
                 {link.label}
-              </button>
+              </Link>
             ))}
-            <Button onClick={() => scrollToSection("contact")} className="bg-gradient-warm">
-              Book Free Trial
-            </Button>
+            <Link to="/enrollment">
+              <Button className="bg-gradient-warm">
+                Get Started
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -77,20 +74,24 @@ const Navigation = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden mt-4 pb-4 space-y-4">
             {navLinks.map((link) => (
-              <button
-                key={link.id}
-                onClick={() => scrollToSection(link.id)}
-                className="block w-full text-left text-foreground/80 hover:text-primary transition-colors font-medium py-2"
+              <Link
+                key={link.path}
+                to={link.path}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`block w-full text-left transition-colors font-medium py-2 ${
+                  location.pathname === link.path
+                    ? "text-primary"
+                    : "text-foreground/80 hover:text-primary"
+                }`}
               >
                 {link.label}
-              </button>
+              </Link>
             ))}
-            <Button
-              onClick={() => scrollToSection("contact")}
-              className="w-full bg-gradient-warm"
-            >
-              Book Free Trial
-            </Button>
+            <Link to="/enrollment" onClick={() => setIsMobileMenuOpen(false)}>
+              <Button className="w-full bg-gradient-warm">
+                Get Started
+              </Button>
+            </Link>
           </div>
         )}
       </div>

@@ -1,15 +1,10 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { BookOpen, TrendingUp, Star, Sparkles } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
 import FloatingShapes from "./FloatingShapes";
 
 const Hero = () => {
-  const scrollToEnrollment = () => {
-    const element = document.getElementById("enrollment");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   return (
     <section id="home" className="relative min-h-screen flex items-center pt-20 overflow-hidden">
@@ -51,26 +46,25 @@ const Hero = () => {
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button
-              size="lg"
-              onClick={scrollToEnrollment}
-              className="bg-gradient-warm text-lg px-8 py-6 shadow-medium hover:shadow-large transition-all hover:scale-105 active:scale-95"
-            >
-              <BookOpen className="mr-2 animate-wiggle" size={20} />
-              Get Started Today
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              onClick={() => {
-                const element = document.getElementById("services");
-                if (element) element.scrollIntoView({ behavior: "smooth" });
-              }}
-              className="text-lg px-8 py-6 border-2"
-            >
-              <TrendingUp className="mr-2" size={20} />
-              View Services
-            </Button>
+            <Link to="/enrollment">
+              <Button
+                size="lg"
+                className="bg-gradient-warm text-lg px-8 py-6 shadow-medium hover:shadow-large transition-all hover:scale-105 active:scale-95"
+              >
+                <BookOpen className="mr-2 animate-wiggle" size={20} />
+                Get Started Today
+              </Button>
+            </Link>
+            <Link to="/services">
+              <Button
+                size="lg"
+                variant="outline"
+                className="text-lg px-8 py-6 border-2"
+              >
+                <TrendingUp className="mr-2" size={20} />
+                View Services
+              </Button>
+            </Link>
           </div>
 
           {/* Trust Indicators */}

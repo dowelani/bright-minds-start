@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { BookOpen, Calculator, ClipboardCheck, Users, Trophy, Star } from "lucide-react";
@@ -6,12 +7,6 @@ import mathKids from "@/assets/math-kids.jpg";
 import homeworkKids from "@/assets/homework-kids.jpg";
 
 const Services = () => {
-  const scrollToEnrollment = () => {
-    const element = document.getElementById("enrollment");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   const services = [
     {
@@ -156,15 +151,16 @@ const Services = () => {
                     <p className="text-2xl font-bold text-primary mb-1">{service.price}</p>
                     <p className="text-sm text-muted-foreground">{service.sessions}</p>
                   </div>
-                  <Button 
-                    onClick={scrollToEnrollment} 
-                    className={`w-full hover:scale-105 active:scale-95 transition-transform ${
-                      service.featured ? "bg-gradient-fun" : ""
-                    }`}
-                    variant={service.featured ? "default" : "outline"}
-                  >
-                    Get Started
-                  </Button>
+                  <Link to="/enrollment" className="w-full">
+                    <Button 
+                      className={`w-full hover:scale-105 active:scale-95 transition-transform ${
+                        service.featured ? "bg-gradient-fun" : ""
+                      }`}
+                      variant={service.featured ? "default" : "outline"}
+                    >
+                      Get Started
+                    </Button>
+                  </Link>
                 </div>
               </Card>
             );
@@ -185,9 +181,11 @@ const Services = () => {
                   </div>
                 </div>
                 <p className="text-muted-foreground mb-4">{service.description}</p>
-                <Button onClick={scrollToEnrollment} variant="outline" className="w-full">
-                  Learn More
-                </Button>
+                <Link to="/enrollment" className="w-full">
+                  <Button variant="outline" className="w-full">
+                    Learn More
+                  </Button>
+                </Link>
               </Card>
             ))}
           </div>
