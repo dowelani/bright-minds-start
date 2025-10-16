@@ -6,8 +6,8 @@ import mathKids from "@/assets/math-kids.jpg";
 import homeworkKids from "@/assets/homework-kids.jpg";
 
 const Services = () => {
-  const scrollToContact = () => {
-    const element = document.getElementById("contact");
+  const scrollToEnrollment = () => {
+    const element = document.getElementById("enrollment");
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
@@ -157,7 +157,7 @@ const Services = () => {
                     <p className="text-sm text-muted-foreground">{service.sessions}</p>
                   </div>
                   <Button 
-                    onClick={scrollToContact} 
+                    onClick={scrollToEnrollment} 
                     className={`w-full hover:scale-105 active:scale-95 transition-transform ${
                       service.featured ? "bg-gradient-fun" : ""
                     }`}
@@ -185,7 +185,7 @@ const Services = () => {
                   </div>
                 </div>
                 <p className="text-muted-foreground mb-4">{service.description}</p>
-                <Button onClick={scrollToContact} variant="outline" className="w-full">
+                <Button onClick={scrollToEnrollment} variant="outline" className="w-full">
                   Learn More
                 </Button>
               </Card>

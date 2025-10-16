@@ -4,8 +4,8 @@ import heroImage from "@/assets/hero-image.jpg";
 import FloatingShapes from "./FloatingShapes";
 
 const Hero = () => {
-  const scrollToContact = () => {
-    const element = document.getElementById("contact");
+  const scrollToEnrollment = () => {
+    const element = document.getElementById("enrollment");
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
@@ -53,11 +53,11 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
               size="lg"
-              onClick={scrollToContact}
+              onClick={scrollToEnrollment}
               className="bg-gradient-warm text-lg px-8 py-6 shadow-medium hover:shadow-large transition-all hover:scale-105 active:scale-95"
             >
               <BookOpen className="mr-2 animate-wiggle" size={20} />
-              Book a Free Trial Session
+              Get Started Today
             </Button>
             <Button
               size="lg"
